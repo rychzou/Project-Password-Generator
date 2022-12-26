@@ -49,24 +49,16 @@ function getPasswordLength() {
     var userChoice = 0;
     while ((userChoice < 8) || (userChoice > 128)) {
         userChoice = parseInt(window.prompt("Enter the number of characters between 8 and 128: "));
-
-        // Checking here to make sure the user entered a number and not a letter.
-        if (isNaN(userChoice)) {
-            // This will reset the choice value to 0 so it can restart the loop if the user entered anything besides a number.
-            userChoice = 0;
-        }
     }
 
     return userChoice;
 }
 
-// Created this function as the user choice options are repetitive and this simplifies the code needed.
 function getChoice(currentOption) {
     var userChoice = "a",
         messagePrompt = "";
     var messagePrompt = ('Would you like '.concat(currentOption));
     messagePrompt = messagePrompt.concat(' characters (y/n)?');
-    // This loop ensures the user enters a valid response.
     while (userChoice = "a") {
         userChoice = (window.prompt(messagePrompt));
         if (userChoice == "y") {
