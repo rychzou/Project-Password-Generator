@@ -69,8 +69,6 @@ function getChoice(currentOption) {
     // This loop ensures the user enters a valid response.
     while (userChoice = "a") {
         userChoice = (window.prompt(messagePrompt));
-        // Added the line below for ease of usability on mobile devices as some of them automatically capitalize when entering input.
-        userChoice = userChoice.toLowerCase();
         if (userChoice == "y") {
             return true;
         } else if (userChoice == "n") {
