@@ -1,8 +1,8 @@
 function generatePassword() {
     //Declared variables and an empty array to hold what they choose.
-    var lowerCaseSet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var upperCaseSet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    var numSet = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+    var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
     var specialSet = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
     var selectedArray = [];
 
@@ -24,13 +24,13 @@ function generatePassword() {
 
     //Puts user's choices into the array I created.
     if (lowerCase) {
-        selectedArray = selectedArray.concat(lowerCaseSet);
+        selectedArray = selectedArray.concat(lowerCaseLetters);
     }
     if (upperCase) {
-        selectedArray = selectedArray.concat(upperCaseSet);
+        selectedArray = selectedArray.concat(upperCaseLetters);
     }
     if (numericCharacters) {
-        selectedArray = selectedArray.concat(numSet);
+        selectedArray = selectedArray.concat(numbers);
     }
     if (specialCharacters) {
         selectedArray = selectedArray.concat(specialSet);
